@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["eharrison@smashtankapps.com"]
   gem.description   = %q{Download the xml from Drugbank.ca and import}
   gem.summary       = %q{Importer for Drugbank.ca}
-  gem.homepage      = ""
+  gem.homepage      = "http://github.com/smashtank/drugbank"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
