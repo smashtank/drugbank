@@ -20,5 +20,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency "sax_stream", "1.0.3"
   gem.add_dependency "rubyzip", "0.9.9"
 
-  gen.license = 'MIT'
+  gem.license = 'MIT'
 end
