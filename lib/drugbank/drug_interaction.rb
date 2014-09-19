@@ -4,7 +4,7 @@ module Drugbank
     include SaxStream::Mapper
 
     node 'drug-interaction'
-    map :interaction_drug_id, :to => 'drug'
+    map :interaction_drug_id, :to => 'drugbank-id'
     map :name,                :to => 'name'
     map :description,         :to => 'description'
   end
