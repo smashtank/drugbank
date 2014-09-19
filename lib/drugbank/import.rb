@@ -32,7 +32,7 @@ module Drugbank
       collector.collect_batch
     end
 
-    private 
+    private
       def set_collector_block(block)
         collector.block = block
       end
@@ -63,11 +63,12 @@ module Drugbank
             zip_file.close()
           end
           #unzip the file first
-          Zip::ZipInputStream::open(file_name) do |io|    
+          Zip::ZipInputStream::open(file_name) do |io|
             while (entry = io.get_next_entry)
               if entry.name.split(/\./).last == 'xml'
                 unziped_file = Tempfile.new(Digest::MD5.hexdigest(entry.name))
                 add_file_for_cleanup(unziped_file)
+                unziped_file.binmode
                 unziped_file.write(io.read)
                 unziped_file.close()
                 return open(unziped_file.path)

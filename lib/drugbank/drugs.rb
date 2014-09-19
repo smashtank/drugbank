@@ -4,7 +4,7 @@ require 'drugbank/drug'
 module Drugbank
   class Drugs < Drugbank::Base
     include SaxStream::Mapper
-    node 'drugs', :collect => false
+    node 'drugbank', :collect => false
 
     relate :drugs, :to => 'drug',  :as => [Drugbank::Drug]
   end
